@@ -27,9 +27,17 @@ function onFormSubmit(event) {
   } = event.currentTarget;
 
   if (email.value === "" || password.value === "") {
-    return console.log("ALARM, Please fill in all the fields!");
+    alert("Please fill in all the fields!");
+    return;
   }
 
-  console.log(`Email: ${email.value}, Password: ${password.value}`);
+  const formData = {
+    email: email.value,
+    password: password.value,
+  };
+
+  console.log(formData);
   event.currentTarget.reset();
 }
+
+// 2) У восьмому завданні при відправці форми потрібно виводити об'єкт з даними з полів, у вас рядок. Також для повідомлення про пусті інпути потрібно виводити через alert а не через console.log

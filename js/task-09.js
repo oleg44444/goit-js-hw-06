@@ -7,6 +7,7 @@ buttonEl.addEventListener("click", onChangeColor);
 
 function onChangeColor(event) {
   spanEl.style.backgroundColor = getRandomHexColor();
+  spanEl.textContent = getRandomHexColor();
 }
 
 function getRandomHexColor() {
@@ -14,3 +15,5 @@ function getRandomHexColor() {
     .toString(16)
     .padStart(6, "0")}`;
 }
+
+// 3) Дев'яте завдання виконане не повністю. Уважно перечитайте умови завдання та виконайте його згідно умов.

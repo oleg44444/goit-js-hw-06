@@ -8,9 +8,10 @@ function getRandomHexColor() {
 // Розміри найпершого <div> - 30px на 30px.
 // Кожен елемент після першого повинен бути ширшим і вищим від попереднього на 10px.
 // Створи функцію destroyBoxes(), яка очищає вміст div#boxes, у такий спосіб видаляючи всі створені елементи.
-const createEL = document.querySelector("data-create");
-const destroyEL = document.querySelector("data-destroy");
+const createEL = document.querySelector("[data-create]");
+const destroyEL = document.querySelector("[data-destroy]");
 const inputEl = document.querySelector(input[(type = "number")]);
+const boxesEl = document.querySelector("#boxes");
 
-
-function createBoxes ()
+const amount = inputEl.currentTarget.value;
+function createBoxes(amount) {}
