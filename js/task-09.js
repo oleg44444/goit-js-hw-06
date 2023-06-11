@@ -1,13 +1,14 @@
-// Напиши скрипт, який змінює кольори фону елемента <body> через інлайн-стиль по кліку на button.change-color і виводить значення кольору в span.color.
-
 const buttonEl = document.querySelector(".change-color");
 const spanEl = document.querySelector(".color");
+const bodyEl = document.body;
 
 buttonEl.addEventListener("click", onChangeColor);
 
-function onChangeColor(event) {
-  spanEl.style.backgroundColor = getRandomHexColor();
-  spanEl.textContent = getRandomHexColor();
+function onChangeColor() {
+  const color = getRandomHexColor();
+
+  bodyEl.style.backgroundColor = color;
+  spanEl.textContent = color;
 }
 
 function getRandomHexColor() {
@@ -15,5 +16,3 @@ function getRandomHexColor() {
     .toString(16)
     .padStart(6, "0")}`;
 }
-
-// 3) Дев'яте завдання виконане не повністю. Уважно перечитайте умови завдання та виконайте його згідно умов.
